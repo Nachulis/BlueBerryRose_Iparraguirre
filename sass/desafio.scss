@@ -1,0 +1,300 @@
+*{ /* selector universal */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.header{
+    background-color: bisque;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container-menu{
+        .logo{
+            img{
+                margin: 20px auto;
+                display:inline;
+                width: 150px;
+                height: auto;
+            }
+        }
+    }
+    .header__menu{
+        ul{
+            list-style: none;/* sacar puntos de la lista */
+            text-transform: uppercase;
+            li{
+                display: flex;
+                margin: 10px 5px;
+                align-items: center;
+                a{
+                    text-decoration: none; /* quitar subrayado  */
+                    color: black;
+                    background-color: pi;
+                    padding: 15px 25px;
+                    text-align: center;
+                    margin: 10px auto;
+                }
+                a:hover{
+                    color: white;
+                    background-color: pink;   
+                }
+            }
+        }
+    }
+}
+.intro{
+    background-image: url(https://d22fxaf9t8d39k.cloudfront.net/83913aa8f8509822cf33e697f2463a2588dd5c5f7f769629ef1a92e80399549320247.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    padding: 5%;
+    h1{
+        font-size: 5em;  
+        text-align: center;
+        color: salmon;
+        font-family: 'Reenie Beanie', cursive;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+    h2{
+        font-size: 3em;
+        text-align: center;
+        font-style: italic;
+        font-weight: 200;
+    }
+}
+.seccionNovedades{
+    border-radius: 15px;
+    border: black solid 2px;
+    padding: 5%;
+    margin: 50px 50px;
+    background-color: cornsilk;
+    display: grid;
+    grid-template-areas:
+    "titulonovedades"
+    "producto1"
+    "producto2"
+    "producto3"
+    "producto4"
+    "producto5"
+    "producto6"
+    "producto7"
+    "producto8"
+    ;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 150px 150px 150px 150px 150px 150px 150px 150px;
+    .tituloNovedades{
+        font-family: 'Festive', cursive;
+        font-size: 3em;
+        text-align: center;
+        font-size: 30px;
+        color: red;
+        grid-area: titulonovedades;
+    }
+    .seccionNovedades__producto1{
+        background-color: black;
+        grid-area: producto1;
+    }
+    .seccionNovedades__producto2{
+        background-color: black;
+        grid-area: producto2;
+    }
+    
+    .seccionNovedades__producto3{
+        background-color: black;
+        grid-area: producto3;
+    }
+    
+    .seccionNovedades__producto4{
+        background-color: black;
+        grid-area: producto4;
+    }
+    
+    .seccionNovedades__producto5{
+        background-color: black;
+        grid-area: producto5;
+    }
+    
+    .seccionNovedades__producto6{
+        background-color: black;
+        grid-area: producto6;
+    }
+    
+    .seccionNovedades__producto7{
+        background-color: black;
+        grid-area: producto7;
+    }
+    
+    .seccionNovedades__producto8{
+        background-color: black;
+        grid-area: producto8;
+    }
+}
+#pie__pagina{
+    background-image: linear-gradient(to right, blue, green );
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    .pie__pagina__menu{
+        ul{
+            list-style: none;
+            li{
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            } 
+        }
+    }
+}
+table{
+    border: blue 2px solid;
+}
+th{
+    background-color: black;
+    color: white;
+}
+
+td{
+    background-color: teal;
+    color: white;
+}
+@media screen and (min-width:768px){
+    .seccionNovedades{
+        display: grid;
+        grid-template-areas:
+        "titulonovedades titulonovedades"
+        "producto1 producto2"
+        "producto3 producto4"
+        "producto5 producto6"
+        "producto7 producto8"
+        ;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 150px 150px 150px 150px ;
+        .tituloNovedades{
+            font-family: 'Festive', cursive;
+            font-size: 3em;
+            text-align: center;
+            font-size: 30px;
+            color: red;
+            grid-area: titulonovedades;
+        }
+        .seccionNovedades__producto1{
+            grid-area: producto1;
+        }
+        
+        .seccionNovedades__producto2{
+            grid-area: producto2;
+        }
+        
+        .seccionNovedades__producto3{
+            grid-area: producto3;
+        }
+        
+        .seccionNovedades__producto4{
+            grid-area: producto4;
+        }
+        
+        .seccionNovedades__producto5{
+            grid-area: producto5;
+        }
+        
+        .seccionNovedades__producto6{
+    
+            grid-area: producto6;
+        }
+        
+        .seccionNovedades__producto7{
+            grid-area: producto7;
+        }
+        
+        .seccionNovedades__producto8{
+            grid-area: producto8;
+        }
+    }
+}
+@media screen and (min-width:1440px){
+    .seccionNovedades{
+        display: grid;
+        grid-template-areas:
+        "titulonovedades titulonovedades titulonovedades titulonovedades"
+        "producto1 producto2 producto3 producto4"
+        "producto5 producto6 producto7 producto8"
+
+        ;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 80px 150px 150px ;
+        .tituloNovedades{
+            font-family: 'Festive', cursive;
+            font-size: 3em;
+            text-align: center;
+            font-size: 30px;
+            color: red;
+            grid-area: titulonovedades;
+            animation: aparecer 10s;
+        }
+        .seccionNovedades__producto1{
+            grid-area: producto1;
+        }
+        
+        .seccionNovedades__producto2{
+            grid-area: producto2;
+        }
+        
+        .seccionNovedades__producto3{
+            grid-area: producto3;
+        }
+        
+        .seccionNovedades__producto4{
+            grid-area: producto4;
+        }
+        
+        .seccionNovedades__producto5{
+            grid-area: producto5;
+        }
+        
+        .seccionNovedades__producto6{
+    
+            grid-area: producto6;
+        }
+        
+        .seccionNovedades__producto7{
+            grid-area: producto7;
+        }
+        
+        .seccionNovedades__producto8{
+            grid-area: producto8;
+        }
+    }
+}
+/* Esto es una transformacion */
+.logo img:hover {
+    transform: scale(1.1,1.1);
+}
+
+/* Es una naimacion */
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translate(150px,0);
+    }
+    100% {
+         opacity: 1;
+         transform: translate(0,0);
+     }
+
+}
+.carrusel{
+    width: 80%;
+    margin: 30px auto;
+    
+}
